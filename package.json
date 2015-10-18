@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs": "jsdoc -d docs -R README.md index.js lib/*.js && git add docs/*",
-    "deploy-docs": "gh-pages -d dist",
+    "deploy-docs": "gh-pages -d docs",
     "test": "node test/test.js",
     "postpublish": "npm run deploy-docs",
     "preversion": "git checkout master && git pull && npm ls",
