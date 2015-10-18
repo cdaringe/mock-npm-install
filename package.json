@@ -1,6 +1,6 @@
 {
   "name": "mock-npm-install",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generates a mock package into node_modules/",
   "main": "index.js",
   "scripts": {
