@@ -4,7 +4,7 @@
   "description": "Generates a mock package into node_modules/",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc -d docs -R README.md index.js && git add docs/*",
+    "docs": "jsdoc -d docs -R README.md index.js lib/*.js && git add docs/*",
     "test": "node test/test.js",
     "preversion": "git checkout master && git pull && npm ls",
     "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",

@@ -1,3 +1,8 @@
+/**
+ * mock-npm-install
+ * @module mock-npm-install
+ */
+
 var fs = require('fs');
 var path = require('path');
 var defaults = require('lodash.defaults');
