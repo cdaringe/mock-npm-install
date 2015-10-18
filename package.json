@@ -1,0 +1,47 @@
+{
+  "name": "mock-npm-install",
+  "version": "1.0.0",
+  "description": "Generates a mock package into node_modules/",
+  "main": "index.js",
+  "scripts": {
+    "docs": "jsdoc -d docs -R README.md index.js && git add docs/*",
+    "test": "npm test",
+    "preversion": "git checkout master && git pull && npm ls",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdaringe/mock-npm-install.git"
+  },
+  "keywords": [
+    "npm",
+    "mock",
+    "install",
+    "package"
+  ],
+  "author": "cdaringe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdaringe/mock-npm-install/issues"
+  },
+  "homepage": "https://github.com/cdaringe/mock-npm-install#readme",
+  "dependencies": {
+    "glob": "^5.0.15",
+    "lodash.defaults": "^3.1.2",
+    "rimraf": "^2.4.3",
+    "tape": "^4.2.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.3.3",
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "validate",
+    "test",
+    "docs"
+  ]
+}

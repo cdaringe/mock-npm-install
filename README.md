@@ -1,5 +1,5 @@
 # mock-npm-install
-Install or removes a dummy package into a node_modules/ folder.  All actions are sync, ATM!
+Install or remove a dummy package into a node_modules/ folder.  All actions are synchronous, at the moment!
 
 ## usage
 ```js
