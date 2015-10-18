@@ -19,6 +19,17 @@ test('install/remove mock module', function(t) {
     t.ok(fs.statSync(mock1Dir), 'mock install dir exists');
     t.ok(fs.statSync(path.resolve(mock1Dir, 'package.json')), 'mock install package.json exists');
     modMocker.remove({ name: mock1.name });
-    t.throws(function() { fs.statSync(mock1Dir); }, Error, 'remove removes node_modules/mock_package_xyz');
+    t.throws(function() { fs.statSync(mock1Dir); }, Error, 'removes node_modules/mock_package_xyz');
+
+    var mock2Dir;
+    mock2 = modMocker.install({ nodeModulesDir: path.resolve(process.cwd(), 'test/node_modules') });
+    mock2Dir = path.resolve(process.cwd(), 'test/node_modules', mock2.name);
+    t.ok(fs.statSync(mock2Dir), 'mock install dir exists w/ custom node_modules path');
+    t.ok(fs.statSync(path.resolve(mock2Dir, 'package.json')), 'mock install package.json exists w/ custom node_modules path');
+    modMocker.remove({
+        nodeModulesDir: path.resolve(process.cwd(), 'test/node_modules'),
+        name: mock2.name
+    });
+    t.throws(function() { fs.statSync(mock2Dir); }, Error, 'removes package in custom node_modules/ path');
     t.end();
 });
