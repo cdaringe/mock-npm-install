@@ -1,3 +1,5 @@
+[ ![Codeship Status for cdaringe/mock-npm-install](https://codeship.com/projects/f54aa580-578b-0133-e7da-36edf9c92862/status?branch=master)](https://codeship.com/projects/109534)
+
 # mock-npm-install
 Install or remove a dummy package into a node_modules/ folder.  All actions are synchronous, at the moment!
 
