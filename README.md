@@ -3,6 +3,8 @@
 See formal docs over @ http://cdaringe.github.io/mock-npm-install/index.html
 
 # mock-npm-install
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/cdaringe/mock-npm-install.svg)](https://greenkeeper.io/)
 Install or remove a dummy package into a node_modules/ folder.  All actions are synchronous, at the moment!
 
 ## usage
