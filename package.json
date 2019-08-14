@@ -34,7 +34,7 @@
   "dependencies": {
     "glob": "^7.1.2",
     "lodash.defaults": "^4.2.0",
-    "rimraf": "^2.4.3",
+    "rimraf": "^3.0.0",
     "tape": "^4.2.1"
   },
   "devDependencies": {
